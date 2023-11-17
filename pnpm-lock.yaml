@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  daisyui:
+    specifier: ^4.3.1
+    version: 4.3.1(postcss@8.4.31)
   million:
     specifier: ^2.6.4
     version: 2.6.4
@@ -1125,7 +1128,6 @@ packages:
   /camelcase-css@2.0.1:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
-    dev: true
 
   /caniuse-lite@1.0.30001562:
     resolution: {integrity: sha512-kfte3Hym//51EdX4239i+Rmp20EsLIYGdPkERegTgU19hQWCRhsRFGKHTliUlsry53tv17K7n077Kqa0WJU4ng==}
@@ -1200,15 +1202,38 @@ packages:
       which: 2.0.2
     dev: true
 
+  /css-selector-tokenizer@0.8.0:
+    resolution: {integrity: sha512-Jd6Ig3/pe62/qe5SBPTN8h8LeUg/pT4lLgtavPf7updwwHpvFzxvOQBHYj2LZDMjUnBzgvIUSjRcf6oT5HzHFg==}
+    dependencies:
+      cssesc: 3.0.0
+      fastparse: 1.1.2
+    dev: false
+
   /cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
-    dev: true
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: true
+
+  /culori@3.2.0:
+    resolution: {integrity: sha512-HIEbTSP7vs1mPq/2P9In6QyFE0Tkpevh0k9a+FkjhD+cwsYm9WRSbn4uMdW9O0yXlNYC3ppxL3gWWPOcvEl57w==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
+  /daisyui@4.3.1(postcss@8.4.31):
+    resolution: {integrity: sha512-dCi91VD+57lkoBd10CjdW4wPOeOPYvvzQbxti6xmyQbDMbCeCXwNq2KdoU798I4OsCcD5B+n7yVG7HAgYW+cvw==}
+    engines: {node: '>=16.9.0'}
+    dependencies:
+      css-selector-tokenizer: 0.8.0
+      culori: 3.2.0
+      picocolors: 1.0.0
+      postcss-js: 4.0.1(postcss@8.4.31)
+    transitivePeerDependencies:
+      - postcss
+    dev: false
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -1425,6 +1450,10 @@ packages:
   /fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
+
+  /fastparse@1.1.2:
+    resolution: {integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==}
+    dev: false
 
   /fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
@@ -1776,7 +1805,6 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
@@ -1904,7 +1932,6 @@ packages:
     dependencies:
       camelcase-css: 2.0.1
       postcss: 8.4.31
-    dev: true
 
   /postcss-load-config@4.0.1(postcss@8.4.31):
     resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
@@ -1952,7 +1979,6 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
-    dev: true
 
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -2100,7 +2126,6 @@ packages:
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /strip-ansi@6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
